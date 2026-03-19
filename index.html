@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的静态博客 | 记录生活与技术</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            margin-left: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* 主要内容区 */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 5%;
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        /* 博客列表 */
+        .blog-list {
+            flex: 3;
+            min-width: 300px;
+        }
+
+        .blog-card {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .blog-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-title a:hover {
+            color: #3498db;
+        }
+
+        .blog-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .blog-excerpt {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .sidebar-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f5f5f5;
+            color: #2c3e50;
+        }
+
+        .category-list, .hot-article-list {
+            list-style: none;
+        }
+
+        .category-list li, .hot-article-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .category-list a, .hot-article-list a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s;
+        }
+
+        .category-list a:hover, .hot-article-list a:hover {
+            color: #3498db;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+            }
+
+            nav li {
+                margin-left: 1rem;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">我的静态博客</div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">技术</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">关于我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 博客列表 -->
+        <section class="blog-list">
+            <!-- 博客1 -->
+            <article class="blog-card">
+                <h2 class="blog-title"><a href="#">HTML5 新特性详解：从语义化到多媒体</a></h2>
+                <div class="blog-meta">
+                    <span>作者：小明</span>
+                    <span>日期：2026-03-10</span>
+                    <span>分类：前端技术</span>
+                </div>
+                <p class="blog-excerpt">HTML5 作为新一代的网页标准，带来了许多实用的新特性，比如语义化标签（header、footer、article 等）、原生多媒体支持、Canvas 绘图、本地存储等。本文将详细讲解这些特性的使用场景和实战技巧，帮助你更好地掌握 HTML5 开发。</p>
+                <a href="#" class="read-more">阅读全文 →</a>
+            </article>
+
+            <!-- 博客2 -->
+            <article class="blog-card">
+                <h2 class="blog-title"><a href="#">零基础学习 CSS 布局：从 Flex 到 Grid</a></h2>
+                <div class="blog-meta">
+                    <span>作者：小明</span>
+                    <span>日期：2026-03-05</span>
+                    <span>分类：前端技术</span>
+                </div>
+                <p class="blog-excerpt">CSS 布局是前端开发的核心技能之一，Flex 布局和 Grid 布局更是现代网页布局的主流方案。本文从零基础开始，通过实际案例讲解 Flex 和 Grid 的核心用法，让你快速掌握响应式布局的实现技巧。</p>
+                <a href="#" class="read-more">阅读全文 →</a>
+            </article>
+
+            <!-- 博客3 -->
+            <article class="blog-card">
+                <h2 class="blog-title"><a href="#">我的编程学习之路：从新手到入门</a></h2>
+                <div class="blog-meta">
+                    <span>作者：小明</span>
+                    <span>日期：2026-02-28</span>
+                    <span>分类：个人成长</span>
+                </div>
+                <p class="blog-excerpt">作为一名编程新手，我走过很多弯路，也积累了一些实用的学习经验。本文分享我从零基础学习编程的过程，包括如何选择学习资源、如何制定学习计划、如何克服学习中的难点，希望能帮助到同样入门的小伙伴。</p>
+                <a href="#" class="read-more">阅读全文 →</a>
+            </article>
+
+            <!-- 博客4 -->
+            <article class="blog-card">
+                <h2 class="blog-title"><a href="#">周末出游推荐：小众但超美的城市周边景点</a></h2>
+                <div class="blog-meta">
+                    <span>作者：小明</span>
+                    <span>日期：2026-02-20</span>
+                    <span>分类：生活随笔</span>
+                </div>
+                <p class="blog-excerpt">厌倦了热门景点的人山人海？本文推荐几个城市周边的小众景点，人少景美，适合周末短途出游。包含交通路线、游玩攻略、拍照技巧，让你的周末出行更有意义。</p>
+                <a href="#" class="read-more">阅读全文 →</a>
+            </article>
+        </section>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <!-- 分类列表 -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">博客分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">前端技术 (2)</a></li>
+                    <li><a href="#">个人成长 (1)</a></li>
+                    <li><a href="#">生活随笔 (1)</a></li>
+                    <li><a href="#">工具推荐 (0)</a></li>
+                </ul>
+            </div>
+
+            <!-- 热门文章 -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">热门文章</h3>
+                <ul class="hot-article-list">
+                    <li><a href="#">HTML5 新特性详解：从语义化到多媒体</a></li>
+                    <li><a href="#">零基础学习 CSS 布局：从 Flex 到 Grid</a></li>
+                    <li><a href="#">我的编程学习之路：从新手到入门</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 我的静态博客 | 基于原生 HTML5 构建</p>
+        <p style="margin-top: 0.5rem;">邮箱：example@blog.com | 微信：example123</p>
+    </footer>
+</body>
+</html>
